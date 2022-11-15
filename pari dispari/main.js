@@ -1,45 +1,41 @@
 
-var numUtente=document.getElementById("input");
-var numrandompc=numeropc();
-var paridispari=document.getElementById("input2");
-var somma=numUtente + numrandompc;
+let numUtente=document.getElementById("input");
+let numrandompc=numeropc();
+let paridispari=document.getElementById("input2");
+let somma=numUtente + numrandompc;
 let button=document.getElementById("button");
 button.addEventListener("click",
 function(){
-    numUtente=document.getElementById("input").value;
-    console.log(numUtente)
-   paridispari=document.getElementById("input2").value;
-   console.log(paridispari);
-    numrandompc=numeropc();
-    console.log(numrandompc)
-     somma= Number(numUtente) + Number(numrandompc);
-     console.log(somma);
-    var stampa=document.getElementById("title1");
-    stampa.innerHTML=`la somma e ${somma}`;
-    var risultato=sommaPariDispari();
-    console.log(risultato);
-    var stampa2=document.getElementById("title2");
-    stampa.innerHTML=risultato;
-    if(numUtente>5 || numUtente==0){
+  numUtente=document.getElementById("input").value;
+  console.log(numUtente)
+
+  paridispari=document.getElementById("input2").value;
+
+  numrandompc=numeropc();
+  console.log(numrandompc)
+  let stampa2=document.getElementById("title2");
+  stampa2.innerHTML=`Il numero del pc è ${numrandompc}`;
+
+  somma= Number(numUtente) + Number(numrandompc);
+  console.log(somma);
+
+  let  risultato=sommaPariDispari();
+  console.log(risultato);
+  let stampa=document.getElementById("title1");
+  stampa.innerHTML=risultato;
+
+  if(numUtente>5 || numUtente==0){
       alert("Attenzione! Devi inserire un numero da 1 a 5");
       location.reload();
-    }
-    if(paridispari!= "pari" && paridispari!= "dispari"){
+  }
+  if(paridispari!= "pari" && paridispari!= "dispari"){
       alert("Attenzione! Devi inserire pari o dispari");
       location.reload();
-    }
+  }
 
 }
 
 );
-
-
-
-
-
-
-
-
 
 
 function numeropc(){
