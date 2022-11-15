@@ -1,4 +1,8 @@
 let parolaUtente=prompt("inserisci parola");
+if(typeof parolaUtente === 'number'){
+  alert("Attenzione! Inserisci una parola non dei numeri");
+  location.reload();
+}
 let parolaInvertita=invertiParola(parolaUtente);
 
  if(parolaUtente == parolaInvertita){
