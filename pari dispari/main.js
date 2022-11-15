@@ -1,6 +1,10 @@
 
 let paridispari=prompt("scegli pari o dispari");
 let numUtente=parseInt(prompt("inserisci un numero da 1 a 5"));
+if(numUtente>5){
+  alert("Attenzione! Devi inserire un numero da 1 a 5");
+  location.reload();
+}
 console.log(numUtente);
 let numrandompc=numeropc();
 console.log(numrandompc);
@@ -33,3 +37,5 @@ function sommaPariDispari(){
  
 
 }
+let i = 0;
+
